@@ -1,45 +1,31 @@
----
-
----
-
 <main class='mx-auto'>
 	<ul class='grid max-w-[568px] h-[360px]'>
-		<li class='rounded-md overflow-hidden'>
+		<li>
 			<img
-				class='object-cover h-full w-full'
-				src='https://images.pexels.com/photos/3601311/pexels-photo-3601311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-				alt=''
+				src='https://images.pexels.com/photos/1031200/pexels-photo-1031200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 			/>
 		</li>
-		<li class='rounded-md overflow-hidden'>
+		<li>
 			<img
-				class='object-cover h-full w-full'
-				src='https://images.pexels.com/photos/3601311/pexels-photo-3601311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-				alt=''
+				src='https://images.pexels.com/photos/1139040/pexels-photo-1139040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 			/>
 		</li>
 
-		<li class='rounded-md overflow-hidden'>
+		<li>
 			<img
-				class='object-cover h-full w-full'
-				src='https://images.pexels.com/photos/3601311/pexels-photo-3601311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-				alt=''
+				src='https://images.pexels.com/photos/573848/pexels-photo-573848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 			/>
 		</li>
 
-		<li class='rounded-md overflow-hidden'>
+		<li>
 			<img
-				class='object-cover h-full w-full'
 				src='https://images.pexels.com/photos/3601311/pexels-photo-3601311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-				alt=''
 			/>
 		</li>
 
-		<li class='rounded-md overflow-hidden'>
+		<li>
 			<img
-				class='object-cover h-full w-full'
-				src='https://images.pexels.com/photos/3601311/pexels-photo-3601311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-				alt=''
+				src='https://images.pexels.com/photos/225203/pexels-photo-225203.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 			/>
 		</li>
 	</ul>
@@ -48,18 +34,24 @@
 <style>
 	ul {
 		padding: 16px 14px;
-		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: 158px 158px;
-		gap: 12px;
+
+		@apply grid-cols-3 gap-3;
+	}
+
+	img {
+		@apply object-cover h-full w-full;
 	}
 
 	li {
 		grid-column: 1 / -1;
 		grid-row: 1 / -1;
+
+		@apply rounded-md overflow-hidden;
 	}
 
 	ul:has(li:nth-child(2)) {
-		grid-template-columns: repeat(2, 1fr);
+		@apply grid-cols-2;
 
 		li {
 			grid-column: auto;
